@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valorant Hub - Arsenal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">VALORANT<span> HUB</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="gallery.html" class="active">Arsenal</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Arsenal <span class="highlight">Senjata</span></h1>
+      <p>Panduan lengkap senjata di Valorant beserta statistik dan penggunaannya</p>
+    </section>
+
+    <section class="weapon-showcase">
+      <h2>🔫 Senjata Populer</h2>
+      <div class="weapon-grid">
+        <div class="weapon-card">
+          <div class="weapon-img">
+            <img src="https://images.unsplash.com/photo-1595590424283-b8f17842773f?w=400&h=250&fit=crop" alt="Vandal" />
+          </div>
+          <div class="weapon-info">
+            <h3>Vandal</h3>
+            <p>Senjata <strong>paling ikonik</strong> di Valorant. Dengan <em>one-tap headshot</em> yang mematikan di jarak berapapun, Vandal menjadi pilihan utama para <mark>Duelist</mark>.</p>
+            <div class="weapon-stats">
+              <span>Damage: <strong>160 (HS)</strong></span>
+              <span>Fire Rate: <em>9.75/s</em></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="weapon-card">
+          <div class="weapon-img">
+            <img src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400&h=250&fit=crop" alt="Phantom" />
+          </div>
+          <div class="weapon-info">
+            <h3>Phantom</h3>
+            <p>Alternatif Vandal dengan <u>silencer</u> dan <em>fire rate</em> lebih tinggi. Cocok untuk pemain yang lebih suka <strong>spray control</strong> daripada one-tap.</p>
+            <div class="weapon-stats">
+              <span>Damage: <strong>156 (HS)</strong></span>
+              <span>Fire Rate: <em>11/s</em></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="weapon-card">
+          <div class="weapon-img">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=250&fit=crop" alt="Operator" />
+          </div>
+          <div class="weapon-info">
+            <h3>Operator</h3>
+            <p>Senjata <mark>sniper</mark> paling mematikan. Satu tembakan di <em>body</em> saja sudah cukup untuk kill. Favorit para <strong>sentinel</strong> yang suka holding angle.</p>
+            <div class="weapon-stats">
+              <span>Damage: <strong>255 (HS)</strong></span>
+              <span>Fire Rate: <em>0.75/s</em></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="weapon-card">
+          <div class="weapon-img">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=250&fit=crop" alt="Sheriff" />
+          </div>
+          <div class="weapon-info">
+            <h3>Sheriff</h3>
+            <p>Pistol <u>paling powerful</u> di Valorant. Dengan <strong>one-tap headshot</strong> di jarak dekat-menengah, Sheriff adalah pilihan <em>eco round</em> yang berbahaya.</p>
+            <div class="weapon-stats">
+              <span>Damage: <strong>159 (HS)</strong></span>
+              <span>Fire Rate: <em>4/s</em></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="weapon-table">
+      <h2>📊 Tabel Perbandingan Senjata</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Senjata</th>
+            <th>Kategori</th>
+            <th>Harga</th>
+            <th>Damage (HS)</th>
+            <th>Fire Rate</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Vandal</strong></td>
+            <td>Rifle</td>
+            <td><mark>2900</mark></td>
+            <td>160</td>
+            <td>9.75/s</td>
+            <td><em>One-tap, all range</em></td>
+          </tr>
+          <tr>
+            <td><strong>Phantom</strong></td>
+            <td>Rifle</td>
+            <td><mark>2900</mark></td>
+            <td>156</td>
+            <td>11/s</td>
+            <td><em>Spray, close-mid range</em></td>
+          </tr>
+          <tr>
+            <td><strong>Operator</strong></td>
+            <td>Sniper</td>
+            <td><mark>4700</mark></td>
+            <td>255</td>
+            <td>0.75/s</td>
+            <td><em>Long range, holding angle</em></td>
+          </tr>
+          <tr>
+            <td><strong>Sheriff</strong></td>
+            <td>Pistol</td>
+            <td><mark>800</mark></td>
+            <td>159</td>
+            <td>4/s</td>
+            <td><em>Eco round, one-tap</em></td>
+          </tr>
+          <tr>
+            <td><strong>Spectre</strong></td>
+            <td>SMG</td>
+            <td><mark>1600</mark></td>
+            <td>78</td>
+            <td>13.33/s</td>
+            <td><em>Anti-eco, close range</em></td>
+          </tr>
+          <tr>
+            <td><strong>Guardian</strong></td>
+            <td>Rifle</td>
+            <td><mark>2250</mark></td>
+            <td>195</td>
+            <td>5.25/s</td>
+            <td><em>Precision, mid-long range</em></td>
+          </tr>
+          <tr>
+            <td><strong>Marshal</strong></td>
+            <td>Sniper</td>
+            <td><mark>950</mark></td>
+            <td>202</td>
+            <td>1.5/s</td>
+            <td><em>Budget sniper, eco</em></td>
+          </tr>
+          <tr>
+            <td><strong>Classic</strong></td>
+            <td>Pistol</td>
+            <td><u>Free</u></td>
+            <td>78</td>
+            <td>6.75/s</td>
+            <td><em>Pistol round, backup</em></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="tips-section">
+      <h2>💡 Tips Memilih Senjata</h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <h3>🎯 Vandal vs Phantom?</h3>
+          <p>Pilih <strong>Vandal</strong> jika suka <em>tap-tap</em> dan bermain di jarak jauh. Pilih <strong>Phantom</strong> jika lebih suka <u>spray</u> dan sering fight di jarak dekat-menengah.</p>
+        </div>
+        <div class="tip-card">
+          <h3>💰 Kapan Beli Operator?</h3>
+          <p>Beli <mark>Operator</mark> saat tim unggul <em>economy</em> dan kamu bermain agent yang bisa <strong>hold angle</strong> seperti Jett atau Chamber.</p>
+        </div>
+        <div class="tip-card">
+          <h3>🔄 Eco Round Strategy</h3>
+          <p>Saat <em>eco round</em>, beli <strong>Sheriff</strong> atau <u>Spectre</u>. Jangan force buy rifle — simpan uang untuk full buy ronde berikutnya.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Valorant Hub | Dibuat dengan ❤️ untuk UTS Web Client Development</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

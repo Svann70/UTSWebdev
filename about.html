@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valorant Hub - Tentang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">VALORANT<span> HUB</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html" class="active">Tentang</a></li>
+        <li><a href="gallery.html">Arsenal</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Tentang <span class="highlight">Valorant</span></h1>
+      <p>Pelajari dasar-dasar dan tips untuk meningkatkan permainanmu</p>
+    </section>
+
+    <section class="about-content">
+      <div class="about-grid">
+        <div class="about-card">
+          <h2>🎮 Apa Itu Valorant?</h2>
+          <p><strong>Valorant</strong> adalah game <em>tactical first-person shooter</em> (FPS) yang dikembangkan dan diterbitkan oleh <mark>Riot Games</mark>. Game ini dirilis secara resmi pada <u>2 Juni 2020</u> untuk platform PC.</p>
+          <p>Dalam Valorant, dua tim beranggotakan <strong>5 pemain</strong> saling bertanding dalam mode <em>plant/defuse</em> yang mirip dengan Counter-Strike, namun dengan tambahan <u>kemampuan unik</u> dari setiap agent.</p>
+        </div>
+
+        <div class="about-card">
+          <h2>🎯 Mekanisme Dasar</h2>
+          <p>Setiap pertandingan terdiri dari <strong>25 ronde</strong> (first to 13). Tim menyerang harus <em>menanam spike</em>, sedangkan tim bertahan harus <u>menghentikan</u> mereka.</p>
+          <p><strong>Economy system</strong> mirip CS:GO — pemain membeli senjata dan ability di awal tiap ronde. Mengelola <mark>ekonomi tim</mark> adalah kunci kemenangan.</p>
+        </div>
+
+        <div class="about-card">
+          <h2>🎭 Sistem Role Agent</h2>
+          <p>Setiap agent memiliki role spesifik:</p>
+          <ul>
+            <li><strong>Duelist</strong> — Entry fragger, <em>inisiator pertempuran</em></li>
+            <li><strong>Controller</strong> — Mengatur <u>smoke</u> dan area control</li>
+            <li><strong>Initiator</strong> — Memberikan <em>info</em> dan membuka jalur</li>
+            <li><strong>Sentinel</strong> — <mark>Anchor</mark> pertahanan dan support</li>
+          </ul>
+        </div>
+
+        <div class="about-card">
+          <h2>💡 Tips untuk Pemula</h2>
+          <ol>
+            <li><strong>Kuasai crosshair placement</strong> — Jaga crosshair selalu di <em>head level</em></li>
+            <li><strong>Pelajari map callout</strong> — Komunikasi adalah <u>setengah kemenangan</u></li>
+            <li><strong>Gunakan aim trainer</strong> — Latihan <mark>aim</mark> secara konsisten</li>
+            <li><strong>Tonton pro player</strong> — Belajar <em>positioning</em> dan <em>game sense</em></li>
+            <li><strong>Jangan toxic</strong> — Mental positif = <u>performa lebih baik</u></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="rank-table">
+      <h2>🏆 Sistem Rank Valorant</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tier</th>
+            <th>Rank</th>
+            <th>Deskripsi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">Low ELO</td>
+            <td><strong>Iron</strong></td>
+            <td>Pemula, masih belajar <em>dasar-dasar</em></td>
+          </tr>
+          <tr>
+            <td><strong>Bronze</strong></td>
+            <td>Sudah paham <u>mekanisme dasar</u></td>
+          </tr>
+          <tr>
+            <td><strong>Silver</strong></td>
+            <td>Mulai mengerti <em>strategi sederhana</em></td>
+          </tr>
+          <tr>
+            <td rowspan="3">Mid ELO</td>
+            <td><strong>Gold</strong></td>
+            <td>Rata-rata pemain, <mark>aim sudah cukup</mark></td>
+          </tr>
+          <tr>
+            <td><strong>Platinum</strong></td>
+            <td>Game sense dan <em>crosshair placement</em> baik</td>
+          </tr>
+          <tr>
+            <td><strong>Diamond</strong></td>
+            <td>Mekanik <u>di atas rata-rata</u></td>
+          </tr>
+          <tr>
+            <td rowspan="3">High ELO</td>
+            <td><strong>Ascendant</strong></td>
+            <td>Pemain <strong>kompetitif</strong>, siap <em>scrim</em></td>
+          </tr>
+          <tr>
+            <td><strong>Immortal</strong></td>
+            <td><mark>Top 1%</mark> pemain, level semi-pro</td>
+          </tr>
+          <tr>
+            <td><strong>Radiant</strong></td>
+            <td>Top <u>500</u> pemain di region, <em>the best of the best</em></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Valorant Hub | Dibuat dengan ❤️ untuk UTS Web Client Development</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
