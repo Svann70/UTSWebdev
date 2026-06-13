@@ -1,4 +1,3 @@
-UTSWebdev/.gitignore
-# Ignore node_modules   
-BELAJAR.md
+*.md
 UTS.md
+
