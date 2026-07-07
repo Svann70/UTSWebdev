@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valorant Hub - Registrasi Turnamen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">VALORANT<span> HUB</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="gallery.html">Arsenal</a></li>
+        <li><a href="registrasi.html" class="active">Registrasi</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Registrasi <span class="highlight">Turnamen</span></h1>
+      <div class="section-divider"></div>
+      <p>Daftarkan dirimu untuk ikut serta dalam Turnamen Komunitas Valorant Hub</p>
+    </section>
+
+    <section class="registrasi-section">
+      <div class="registrasi-layout">
+        <div class="form-panel">
+          <h2>Formulir Pendaftaran</h2>
+          <form id="tournament-form" novalidate>
+            
+            <div class="form-group">
+              <label for="client-name" class="form-label">Nama Lengkap <span>*</span></label>
+              <input
+                type="text"
+                id="client-name"
+                class="form-control"
+                placeholder="Masukkan nama lengkap Anda"
+                required
+                minlength="3"
+              />
+              <span class="error-message" id="name-error">Nama minimal 3 karakter dan wajib diisi.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="riot-id" class="form-label">Riot ID (Username#TAG) <span>*</span></label>
+              <input
+                type="text"
+                id="riot-id"
+                class="form-control"
+                placeholder="Contoh: TenZ#NA1"
+                required
+                pattern="^.{3,16}#[a-zA-Z0-9]{3,5}$"
+              />
+              <span class="error-message" id="riot-id-error">Riot ID wajib diisi dengan format Username#TAG (tag 3-5 karakter alfanumerik).</span>
+            </div>
+
+            <div class="form-group">
+              <label for="client-email" class="form-label">Alamat Email <span>*</span></label>
+              <input
+                type="email"
+                id="client-email"
+                class="form-control"
+                placeholder="Contoh: gamer@email.com"
+                required
+              />
+              <span class="error-message" id="email-error">Masukkan alamat email yang valid.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="client-phone" class="form-label">Nomor WhatsApp <span>*</span></label>
+              <input
+                type="tel"
+                id="client-phone"
+                class="form-control"
+                placeholder="Contoh: 081234567890"
+                required
+                pattern="^(\+62|0)8[1-9][0-9]{7,10}$"
+              />
+              <span class="error-message" id="phone-error">Masukkan nomor HP Indonesia yang valid (mulai dengan 08/628 dan panjang 10-13 digit).</span>
+            </div>
+
+            <div class="form-group">
+              <label for="client-role" class="form-label">Role Utama <span>*</span></label>
+              <select id="client-role" class="form-control" required>
+                <option value="" disabled selected>-- Pilih Role Utama --</option>
+                <option value="Duelist">Duelist (Jett, Reyna, Raze, Phoenix, Neon, Iso)</option>
+                <option value="Initiator">Initiator (Sova, Fade, Breach, Skye, Gekko, Kayo)</option>
+                <option value="Controller">Controller (Omen, Viper, Brimstone, Astra, Harbor, Clove)</option>
+                <option value="Sentinel">Sentinel (Killjoy, Cypher, Sage, Chamber, Deadlock)</option>
+              </select>
+              <span class="error-message" id="role-error">Pilih salah satu role utama Anda.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="client-rank" class="form-label">Tier Rank Saat Ini <span>*</span></label>
+              <select id="client-rank" class="form-control" required>
+                <option value="" disabled selected>-- Pilih Rank Saat Ini --</option>
+                <option value="Iron">Iron</option>
+                <option value="Bronze">Bronze</option>
+                <option value="Silver">Silver</option>
+                <option value="Gold">Gold</option>
+                <option value="Platinum">Platinum</option>
+                <option value="Diamond">Diamond</option>
+                <option value="Ascendant">Ascendant</option>
+                <option value="Immortal">Immortal</option>
+                <option value="Radiant">Radiant</option>
+              </select>
+              <span class="error-message" id="rank-error">Pilih salah satu tier rank saat ini.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="match-date" class="form-label">Pilihan Tanggal Tanding <span>*</span></label>
+              <input
+                type="date"
+                id="match-date"
+                class="form-control"
+                required
+              />
+              <span class="error-message" id="date-error">Tanggal turnamen harus hari ini atau di masa mendatang.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="client-notes" class="form-label">Catatan & Pengalaman Kompetitif <span>*</span></label>
+              <textarea
+                id="client-notes"
+                class="form-control"
+                placeholder="Tuliskan pengalaman kompetitif Anda atau nama tim jika mendaftar bersama tim..."
+                required
+                minlength="10"
+              ></textarea>
+              <span class="error-message" id="notes-error">Catatan minimal 10 karakter dan wajib diisi.</span>
+            </div>
+
+            <div class="btn-submit-container">
+              <button type="submit" class="btn btn-form">Kirim Pendaftaran</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="status-panel">
+          <h3>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v-2H7v-2h7V9H7V7h10v10h-3z"/></svg>
+            Status Pendaftaran
+          </h3>
+          
+          <div id="status-empty" class="status-empty">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            <p>Belum ada pendaftaran aktif dari perangkat ini.</p>
+          </div>
+
+          <div id="status-active" class="status-active" style="display: none;">
+            <div class="success-banner">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span>Terdaftar untuk Turnamen!</span>
+            </div>
+            
+            <div class="detail-list">
+              <div class="detail-item">
+                <div class="detail-label">Nama Lengkap</div>
+                <div class="detail-value" id="disp-name"></div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Riot ID</div>
+                <div class="detail-value" id="disp-riot-id"></div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Alamat Email</div>
+                <div class="detail-value" id="disp-email"></div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Nomor WhatsApp</div>
+                <div class="detail-value" id="disp-phone"></div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Role Utama</div>
+                <div class="detail-value" id="disp-role"></div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Tier Rank</div>
+                <div class="detail-value" id="disp-rank"></div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Tanggal Tanding</div>
+                <div class="detail-value" id="disp-date"></div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Catatan Pengalaman</div>
+                <div class="detail-value" id="disp-notes"></div>
+              </div>
+            </div>
+
+            <button id="btn-cancel" class="btn-cancel">Batalkan Pendaftaran</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Ivander Daniel Napitupulu</p>
+    <p>UAS Web Client Development</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
